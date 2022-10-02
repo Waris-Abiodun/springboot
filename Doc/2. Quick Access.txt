@@ -1,0 +1,21 @@
+What is a Gradle used for?
+Gradle is a build automation tool known for its flexibility to build software. A build automation tool is used to automate the creation of applications. The building process includes compiling, linking, and packaging the code. The process becomes more consistent with the help of build automation tools.
+
+Is Gradle same as Maven?
+Gradle is based on a graph of task dependencies – in which tasks are the things that do the work – while Maven is based on a fixed and linear model of phases. With Maven, goals are attached to project phases, and goals serve a similar function to Gradle's tasks, being the “things that do the work.”2
+
+What is Maven and why it is used?
+Maven is a popular open-source build tool developed by the Apache Group to build, publish, and deploy several projects at once for better project management. The tool provides allows developers to build and document the lifecycle framework.
+
+What is Maven vs Java?
+Apache Maven is a cornerstone of Java development, and the most used build management tool for Java. Maven's streamlined, XML-based configuration model enables developers to rapidly describe or grasp the outlines of any Java-based project, which makes starting and sharing new projects a snap.
+ 
+
+to run springboot on CLI 
+you have to install maven, gradle, JDK/java , SDK man and springboot on command line interface
+
+after installation
+you can create your file with .groovy extention e.g app.groovy, hello.groovy
+
+you can run your .groovy extension file wih : spring run filename
+e.g spring run hello.groovy

@@ -1,0 +1,16 @@
+you will need a text editor to write your spring code, you will need maven or and gradle dependncy
+you will wrie your  code
+
+
+yo need to have active internet connection to do this
+to create an executabel jar with maven:
+mvn clean install  --if it is successful you will see build success(your jar file is under target)
+
+to create an executable jar with gradle:
+gradle clean intall (your jar file is under build libs)
+
+to run your jar file 
+
+ls
+cd target
+jave -jar [filename ending with .jar]

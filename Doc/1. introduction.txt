@@ -1,0 +1,21 @@
+springboot providesa good platform for java developers to develop a tsnadalone production -grade spring appilication tha you can just run
+springboot is a good choic cause of scalability i.e the size doesnt affect its functionality as the business grows its adjust automatically to it
+it reduces develelopment time and run applications independently compard to beforre that you will need to get many dependecies , steps and framework to run yor application after you code
+it provides a powerful batch processing and manges REST endpoints, REpresentational State Transfer allows user to get,update, dele and create resources
+
+>>>>>How it Works
+ the entry point is the class you use the annotation @SpringBootApplication and the main method
+spring boot use @ComponentSCan annotation to scan all the components
+adding @EnableAutoConfiguration or @SpringBootApplication annotation to your main class fie allows springboot ti automatically configures your spring application based on JAR dependencies added in the project
+using @springbootapplication do not need to add @EnableAutoConfiguration, @ComponentScan and @SpringBootConfiguration as it include all other annotation
+
+@ComponentScan scan the components added in the projects, it scan all the beans and package declaration when the application initializes
+
+>>>>>>Springboot Staterter can be use for the following
+it can be used to manage and monitor your application[Spring Boot Starter Actuator Dependecies]
+It can be used for Spring security[Spring Boot Starter Security dependecy]
+it can be used for REST endpoints[Spring  Boot Starter web dependency]
+it can be used to create web application[Spring boot Starter ThymeLeaf dependency]
+it can be used for writing test cases[spring boot Starter Test dependency]
+
+>>>>>>
