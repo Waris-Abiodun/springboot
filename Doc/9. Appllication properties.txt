@@ -1,0 +1,50 @@
+application properties support us to work in different environments, it allows you to configure and specify properties to a spring boot application
+
+>>>>Command line properties
+springboot application covercts the command line properties into spring boot environment
+comand line propertiestake precedencies over property sources
+
+you can use this syntax o change the port "java -jar filename.jar --seerver.port=9090(9090 is a port i want)
+using -- delimeter allows yo to provide more than one properties
+
+>>>>Properties file
+properties are use to keep many "N" numner of properties in a single file to run spring application in different environmet
+properties file are stored in src/main/resources directory and are kept[file name] in application.properties[you will see the file there all you have to do is to edit]
+{this update are in my secondspring boot project on GIHUB}
+>>>YAML file
+springboot support YAML based properties configration to run the application, we can use application.yml instead of aplication.properties
+
+TO run springboot with your properties file use the syntax
+java -jar -Dspring.config.location=C:{your src\main\resources path from home directory}\application.properties or spplication.yml
+
+
+>>>Externalized properties
+@Value annotation : is used to read the environment or application property from java code 
+syntax = @value("${spring.application.name})
+
+Note: If the property is not found while running the application, Spring Boot throws the
+Illegal Argument exception as Could not resolve placeholder
+'spring.application.name' in value "${spring.application.name}".
+
+To resolve the placeholder issue, we can set the default value for the property using thr
+syntax given below:
+@Value("${property_key_name:default_value}")
+@Value("${spring.application.name:demoservice}")
+
+>>>>>Springboot active profile
+spring support differrent properties based on the spring active profile, that is we cann keep two seperte file for development and production to run springboot apllication
+in my example on command line interface , i added two more profile --> application-dev.properties , application-prod.properties
+
+when running the jar file by defualt springboot use application.properties so if you want to run other then you will sepcify it like this 
+java -jar filename.jar --spring.profiles.active=dev  (to run application-dev.properties)
+java -jar filename.jar --spring.profiles.active=prod  (to run application-prod.properties)
+
+
+let play around with .yml file, do you remember we can use application.yml instead of application.properties
+>>>>>>>>>>>>>>>>>Spring active profile for application.yml
+recall in .properties we keep seperate file but here we dont need to create seperate files
+only application.yml file we use "---" as delimeter to end each profile, check my .yml file in command lline runner under src/main/resources
+
+you can run both .yml file and .properties file with the same command 
+java -jar filename.jar --spring.profiles.active=[yor profile name]
+NOTE: application-[name].properties that is the way you can write your .properties file where tou replace [name] with your profile name

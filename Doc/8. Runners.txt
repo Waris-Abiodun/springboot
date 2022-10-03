@@ -1,0 +1,3 @@
+Application runner and command line runner when you implememts its in your sping projects. it allows yo to execute code after the springboot application has started, it allows you to perform any action immediately after the application has started
+
+to use application runner, commandline runner you will implements applicationrunner, commandlinerunner in your class respectively.

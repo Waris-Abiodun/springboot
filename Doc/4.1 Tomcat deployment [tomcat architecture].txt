@@ -1,0 +1,47 @@
+Tomcat is a web application server for running java based apps
+is an open  source java servlet container
+it manages the life cycle of servlet to process the HTTP reqest - response
+it used web server to serve local files
+
+>>>SERVLET
+servlet is a java server side technology which will handl the request and response from the server/backend
+servlet is used to write HTML code inside java method to process it as a response, it is better we use java server page instead of this
+Each servlet has a life cycle which will be managed by tomcat container[owning it->on load->destroy]
+servlet doesnt nnderstand http code, it is just working as a middle layer betweeen java application and http request
+
+>>>>Jacatalina java server Page(JSP)
+java server page is a java  rpresentational layer, instead of the regular HTML file
+Jva server page is used to write java code inside HTML tags, to dynamically represent data to user
+Each JSP will be converted to servlet
+
+>>>>Websocket API
+websocket API is bidirectional , protocol that is used for client-server commnication
+it is ususally starts with WS:// or WSS://
+it is a stateful protocol which means connection between client and server will keep alive ntil it is terminatdd by client or server, it is used for real time update or streamng of data over the network
+it is good for gaming, chatting an any real time updated data
+
+>>>TOMCAT COMPONENTs
+---Catalina
+catalina handles the request between servet and the rest of tomcat(container)
+such as RLS routing to different servlet
+---Jasper
+jasper is used to compile JSP into servlet
+at runtime , Jasper detects changes to JSP files and recompile them
+---Coyote
+it handles the actal HTTP commnication, (connector)
+allowing the server to serve static files 
+
+>>>>TOMCAT ARCHITECHTURE
+SERVER-- where is your service runs, it contains also several listeners to interact with events
+	inside SERVER: we have
+			Service-- is a collection of one or more "connectors",,that share a single "container"
+			service will take us to:
+						Engine--represent the entry point of catalina that represent processes every request
+						inside engine we have:
+									Host: this can be 8080, 
+									the host have different applicaion:
+													:application 1, 2, 3, 4--- this extends after the 8080/ to get the a particlar application from the server
+
+>>>>HOW TOMCATOR SERVLET IS LOADING
+web client
+/resource->[web server]-> [java servllet]->{wev.xml or annotation}->if not found[rsponse with 404 satatuus ocd(page not )] || if found->[invoke init servlet or onload init srvlet]->[invoke service servlet i.e get , post,put etc] -> [retrn resources to web client]-> [invoke destroy servlet]

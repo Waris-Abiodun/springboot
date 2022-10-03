@@ -1,0 +1,14 @@
+you will have to add the following to your pom file if yo are using maven
+
+<packaging>war</packaging><packaging>war</packaging>
+<start-class>com.tutorialspoint.demo.DemoApplication</start-class>
+             pacakage of your rest controller.File Class
+
+on your command line use the following code to run your tomcat file
+you need to have internet connection
+
+mvn package - you will see build success (yor war file will be in target directory)
+
+using gradle: gradle clean build - you will see build success (yor war file will be in bild/lib)
+
+then se yor server container to run the war file(you can use tomcat container)

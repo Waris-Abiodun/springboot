@@ -1,0 +1,11 @@
+spring boot doesnt have any layout to work with
+the best practice we can emulate are discussed here
+
+if you use ecipse to rn yor configuration file , your java class will be under com.filename.demo
+it is a good practice to have your other package in that format
+
+let assume you want to create abc package
+it will be created like this comm.filename.abc
+then you can add class,interface etc under it, 
+
+if you are using intelliJ it configure it the same way too		

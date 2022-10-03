@@ -1,0 +1,17 @@
+if you run springboot application without stopping the previous run. i.e you run your program twice
+you will receive this error
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+>>>>>>>>to fix the error
+open your Command prompt
+run the command " netstat -a -n -o"
+check for the port 8080 or anyh custom port you want to run your program under "local address"
+once you see it trace the PID and run "taskkill /F /pid 1764" {repcae 1764 with your current PID number}command to stop the pid
+
+now you can rerun your program

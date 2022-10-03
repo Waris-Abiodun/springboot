@@ -1,0 +1,12 @@
+Choosing a build system, springboot recommend mavenor gradle as thy provide good support for dependcy management
+you dont need to provide a versionof dependecies in th build configration file, springboot automatically configurs depedenes base on the versin release
+when you upgrade spring boot version , dependencies also will upgrade automatically
+
+if you use start.spring.io you dont have to worried about this
+>>>For maven
+yo should specify the version number for spring boot parent starter dependecy only, for others it is not neccesary
+
+>>>For Gradle
+We can import the Spring Boot Starters dependencies directly into build.gradle file. We
+do not need Spring Boot start Parent dependency like Maven for Gradle
+also the spring version will automatically configure, no need to specify the version

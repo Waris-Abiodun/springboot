@@ -2,7 +2,7 @@ you will need a text editor to write your spring code, you will need maven or an
 you will wrie your  code
 
 
-yo need to have active internet connection to do this
+yo need to have active internet connection to do this for the first time
 to create an executabel jar with maven:
 mvn clean install  --if it is successful you will see build success(your jar file is under target)
 
