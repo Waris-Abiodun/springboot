@@ -1,0 +1,50 @@
+springboot uses apache common logging for all internal logging.
+
+springboot's default configuration provides a support for the use of java util logging, log4j2, and Logback
+using these , we can configure the console logging as well as file logging
+>>>>>>LOG FORMAT
+logs are used by developer to know the state of computer, it can be use for troubleshooting, knowing the time and other properties changes in the computer helps the developer in programming
+which gives you the following information:
+	 Date and Time that gives the date and time of the log
+	 Log level shows INFO, ERROR or WARN
+	 Process ID
+	 The --- which is a separator
+	 Thread name is enclosed within the square brackets []
+	 Logger Name that shows the Source class name
+	 The Log message>>>>>>>>CONSOLE LOG OUTPUT
+
+>>>>>>>>>CONSOLE LOG OUTPUT
+If you have to enable the debug level log, add the debug flag on starting your application
+using the command shown below:  
+java -jar file.jar --debug
+
+debug mode can be added to application.properties or application.yml file 
+######setting : debug=true
+
+>>>>>>>FILE LOG OUTPUT
+by default logs will print on the console window not in thre files, if you want to print the logs in  file you will need to set the property "logging.file or logging.path" in the application.properties or application.yml file
+the file log for spring is (spring.log)
+you can add the log file in your application.properties or .yml file
+######setting : logging.path=/var/tmp (which means logging.path=LogFilePath)
+you can redirect the file in your application.properties or .yml file
+######setting : logging.file=/var/tmp/YouCanNameTheFileLog.log (this is the path and you can set your own name log file)
+NOTE: log file will rotate automatically after reaching the size of 10mb
+
+>>>>>>>>>>>>>>LOG LEVELS
+example of Logger levels : “TRACE”, “DEBUG”, “INFO”, “WARN”, “ERROR”, “FATAL”, “OFF”
+springboot supports all logger file, you can define root logger in your application.properties or .yml file
+#######setting : logging.level.root=WARN
+		 logging.level.org.springframework.web=debug
+		 logging.level.org.hibernate=error
+
+It is also possible to set logging levels using environment variables. For example,
+LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB=DEBUG will set org.springframework.web to DEBUG.
+
+
+to enable trace,
+#######setting : trace=true
+If your terminal supports ANSI, color output is used to aid readability. You can set
+spring.output.ansi.enabled
+using #########  %clr will color the output according to the log level
+you can specify t color or style using ### %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){yellow}
+other colors and style that are supported are [ blue, cyan, faint,green,magenta, red, yellow]
