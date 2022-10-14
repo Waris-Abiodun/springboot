@@ -13,4 +13,4 @@ to run your jar file
 
 ls
 cd target
-jave -jar [filename ending with .jar]
+java -jar [filename ending with .jar]

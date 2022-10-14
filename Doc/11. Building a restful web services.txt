@@ -1,0 +1,60 @@
+you can generate the web dependecy from spring.starter which can be use on eclipse, and some other IDE, it can alo be using on command line interfac
+Let explain the following annotation:
+ @RestController: it defines the RESTful web services, it serves JSON. XML and custom response
+ @RequestMapping:  is use to define the request URL to access the REST endpoint
+ @RequestBody: it used to define the request body content type(it is pass as an arguments)
+ @PathVariable: it is used to define custom or dynamic request RL, the path variable in the request URi is defined as  curly braces
+ @RequestParameter:  it is used to read the request parameters from the request URL, by default it is required
+>>>>>>>>>>>>GET API
+ the defaut http method is get. this does not reuire any request body, check my github for getApi folder in springbot repository.
+in the code we use Hashmap to store the data/product (we used POJO class as the product to be stored)
+the request URL is /GettingOurProductUsingGetAPI and it will return the list of products from Hasmap repository/class the controller class file contains the GET method endpoints
+
+{the code structure}
+mian class that has spring nitializer
+product class : where we get and set the product name and id
+ProductServicesController: where we first put or assign value to our name before getting the value from our conatiner using response entity
+
+
+>>>>>>POST API
+the post api create a resources directly , so this will contain a request body i.e where we can modify the value of name and id etc, so we can send requests paramter and path variables to define custom or dynamic url
+mian class that has spring nitializer
+product class : where we set and get the product name and id
+productServiceController: here we use request mapping and specify the method and also we will use the path {id} which defines product Id that need to be updated or create
+
+using the same mapping or getAPI URL will allow you to update existing ones and create a new ones
+the URL i am using is this, you can input an ID to update or create "/GettingOurProductUsingGetAPI/{id}"
+
+>>>>>>DELETE API
+this is your for deleting an existing resources, so it doesnt contain any request body, we can send request parameters and path varaible to define the custom or dynamic URL
+mian class that has spring nitializer
+product class : where we set and get the product name and id
+productServiceController: since we are deleting existing resources so we have to use URL or mapping of our GetAPI sp the request url looks like
+/GettingOurProductUsingGetAPI/{id}", so we used the id which is the path to products/resouces to be deleted
+
+
+>>>>>getting your user on post man
+you will use get
+on your postman you can use http://localhost:8080/yourURL  , here mine is http://localhost:8080GettingOurProductUsingGetAPI, 
+it will get all your resources and id
+>>>updating it on postman
+you will use put
+on your postman you will write your update under body>>raw>>JSon
+then you can use this URL http://localhost:8080/yourURL/idTobeupdated or created like mine if i want to create another with an id of 4
+i will use http://localhost:8080GettingOurProductUsingGetAPI/4 then it will create it, after this you can get your API to see your updated product or resources
+you can also update an existing one assuming you want to change id 3 that is butter to Tomatoes you will use put an called the id which is 3 http://localhost:8080GettingOurProductUsingGetAPI/3
+your JSOn file will look like this 
+
+{
+	"name": "Your New name"
+}
+for id of 4 that we just created it will looks like
+{
+	"name": "Garlic"
+}
+so id of 4 will be garlic , you can use getAPI to see the wonder
+
+for id of 3 we want to update to  "tomato" it  will look like
+{
+	"name": "Tomato"
+}
